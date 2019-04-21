@@ -4,10 +4,16 @@
 <article class="container">
   <div class="row">
     <div class="col-sm-4 left-rail">
-      {% block info %}{% endblock %}
+      {% block info %}
+      {% endblock %}
     </div>
     <div class="col-sm-8">
-      {% block story %}{% endblock %}
+      {% block story %}
+        <h3>
+          Detail layout, no override
+        </h3>
+        <p> right column </p>
+      {% endblock %}
 
     </div>
   </div>
