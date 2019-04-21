@@ -121,5 +121,27 @@
       "year": 1995,
       "image": "Queen_Made_in_Heaven.jpg"
     }
+  ],
+  "bios": [
+    {
+      "name": "Brian May",
+      "url": "brian-may.html",
+      "title": "Brian May"
+    },
+    {
+      "name": "Freddie Mercury",
+      "url": "freddie-mercury.html",
+      "title": "Freddie Mercury"
+    },
+    {
+      "name": "John Deacon",
+      "url": "john-deacon.html",
+      "title": "John Deacon"
+    },
+    {
+      "name": "Roger Taylor",
+      "url": "roger-taylor.html",
+      "title": "Roger Taylor"
+    }
   ]
 }
