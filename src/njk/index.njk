@@ -8,9 +8,8 @@
   <div class="row">
     <div class="col-sm-8 offset-sm-2">
     <h1>Overview of the Band</h1>
-    <p class="author">By {% for author in authors %}
-      <a href="{{ author.link }}" target="_blank">{{ author.name }}</a>{% if not loop.last %}{% if loop.revindex0 == 1 %} and {% else %}, {% endif %}{% endif %} {% endfor %}
-      <br> Published {{ publish_date }}
+    <p class="author">By Bella McWhorter
+      <br> Published May 9
     </p>
     </div>
   </div>
@@ -19,9 +18,9 @@
       <p>
       Queen is a rock band from London. They are super cool, they formed in 1970 with four original classic lineup is Brian May, Freddie Mercury, John Deaco, and Roger Taylor. They are very talented and beloved by many. Their music has far outlived their time, being popular even in 2019, especially loved by coding teachers from UT.
       </p>
-        {% for bio in data.bios %}
-          <h3 class="bio-headline"><a href="{{ bio.url }}">{{bio.title}}</a><h3>
-          <p class="bio-name">{{ bio.name}}</p>
+        {% for member in data.members %}
+          <h3 class="member-headline"><a href="{{ member.url }}">{{member.name}}</a><h3>
+          <p class="member-name">{{ member.instruments }}</p>
           <hr>
         {% endfor %}
     </div>

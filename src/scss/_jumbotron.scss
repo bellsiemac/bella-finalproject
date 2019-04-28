@@ -1,8 +1,11 @@
 .jumbotron.banner {
   background: url(../img/queen-band-wallpaper-thin.jpg) no-repeat center;
   background-size: cover;
-  color: white;
-  padding-top: 12rem
+  color: rgb(128, 15, 15);
+  padding-top: 12rem;
+  font-weight: 3000;
+  font-family: 'myFont';
+  src: url("myFont.woff");
 }
 
 .jumbotron {
