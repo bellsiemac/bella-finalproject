@@ -1,13 +1,23 @@
 {% extends '_layouts/base.njk' %}
-
+{% block page_title %}{{ member.name }}{% endblock %}
 {% block content %}
 <article class="container">
   <div class="row">
     <div class="col-sm-4 left-rail">
-      {% block info %}{% endblock %}
+      {% block info %}
+        <img src="./img/members/{{ member.imagebw }}" class="img-fluid" alt="Responsive image">
+        <hr>
+        <p>Instruments: {{ member.instruments }}</p>
+        <p>Tenure: {{ member.tenure }}</p>
+        <p>Birthplace: {{ member.birthplace }}</p>
+        <p>Birthdate: {{ member.birthdate }}</p>
+      {% endblock %}
     </div>
     <div class="col-sm-8">
-      {% block story %}{% endblock %}
+      {% block story %}
+        <h2>{{ member.name }}</h2>
+        {{ member.text | safe }}
+      {% endblock %}
 
     </div>
   </div>

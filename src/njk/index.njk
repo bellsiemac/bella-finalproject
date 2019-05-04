@@ -6,24 +6,50 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-8 offset-sm-2">
-    <h1>Overview of the Band</h1>
-    <p class="author">By Bella McWhorter
-      <br> Published May 9
-    </p>
+    <div class="col-sm-12">
+      <h1 class="main-heading">Band Overview</h1>
+      <p class="author">By Bella McWhorter — <em>Published May 9</em></p>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-8 offset-sm-2">
+    <div class="col-sm-12">
       <p>
       Queen is a rock band from London. They are super cool, they formed in 1970 with four original classic lineup is Brian May, Freddie Mercury, John Deaco, and Roger Taylor. They are very talented and beloved by many. Their music has far outlived their time, being popular even in 2019, especially loved by coding teachers from UT.
       </p>
-        {% for member in data.members %}
-          <h3 class="member-headline"><a href="{{ member.url }}">{{member.name}}</a><h3>
-          <p class="member-name">{{ member.instruments }}</p>
-          <hr>
-        {% endfor %}
     </div>
   </div>
-</div>
+  <div class="row">
+    {% for member in data.members %}
+      <div class="col-sm-3">
+        <div class="card ">
+          <div class="musician-img-div">
+            <img class="card-img-top " src="img/members/{{ member.squareimage }}" alt="{{ member.name }}">
+          </div>
+          <div class="card-body musician-text">
+            <h4 class="member-headline card-title"><a href="{{ member.url }}">{{member.name}}</a><h4>
+            <p class="card-subheading">{{ member.instruments }}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <hr>
+  <h1 class="main-heading">Discography</h1>
+  <br>
+  <div class="container">
+    <div class="row">
+      {% for discography in data.discography%}
+        <div class="card col-sm-3">
+          <div class="musician-img-div">
+            <img class="card-img-top" src="img/discs/{{discography.image}}" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <h3 class="discography-headline"><a href="{{ discography.url }}" target="_blank">{{discography.title}}</a><h3>
+            <p class="card-subheading">{{ discography.year }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 {% endblock %}
+
